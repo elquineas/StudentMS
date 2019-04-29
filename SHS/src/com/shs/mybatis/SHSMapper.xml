@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shs.mybatis.SHSMapper.xml">
+	<insert id="memInsert">
+		INSERT INTO shsmember(sid, sname, sage, smajor, sphone)
+		VALUES(seq_shsmember_sid.NEXTVAL, #{sname}, #{sage}, #{smajor}, #{sphone})
+	</insert>
+	<!-- resultType은 결과값을 반환하는 Type
+		실제 패키지경로를 모두 작성해야함
+		ex) com.shs.dto.MemberDTO
+		그러나 Configyration.xml파일에 TypeAlias(별명)
+		을 사용하면 MemberDTO처럼 간단하게 입력 가능 -->
+	<select id="memSelect" resultType="MemberDTO">
+		SELECT  * FROM shsmember
+		ORDER BY sid
+	</select>
+	<select id="memInfo" parameterType="int" resultType="MemberDTO">
+		SELECT * FROM shsmember
+		WHERE sid = #{id}
+	</select>
+	<!-- DB로 보내주는 타입을 parameterTypem, DB에서 오는 타입을 resultType -->
+	<update id="memUpdate" parameterType="MemberDTO">
+		UPDATE shsmember
+		SET sname = #{sname},
+			sage = #{sage},
+			smajor = #{smajor},
+			sphone = #{sphone}
+		WHERE sid = #{sid}
+	
+	</update>
+	<delete id="memDelete" parameterType="int">
+		DELETE FROM shsmember
+		WHERE sid = #{id}
+	</delete>
+	<!-- id 하나만 낱개로 보내기 때문에 id라고 쓰고 DTO로 보내는 애들은 sid라고 씀 -->
+</mapper>
