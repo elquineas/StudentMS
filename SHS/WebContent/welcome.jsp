@@ -81,12 +81,13 @@
 </head>
 <body>
 	<div class="content">
-		<a href="index.jsp">
-			<div class="shs_title">
+		<div class="shs_title">
+			<a href="index.shs">
 				JAVA기반 스마트 하이브리드<br>
 				개발자 과정 2기
-			</div>
-		</a> 
+			</a> 
+		</div>
+		
 		<div class="shs_manager"> - 환영합니다. - </div>
 		<div class="container">
 			<div class="welcome_text text1">등록해주셔서 감사합니다!</div>
@@ -104,7 +105,7 @@
 			if(cnt == 0){
 				clearInterval(s);
 				//초세는 것을 중단
-				location.href="index";
+				location.href="index.shs";
 			}
 			document.getElementById("rCnt").innerHTML=cnt;
 			//제이쿼리로 바꾸면

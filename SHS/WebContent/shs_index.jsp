@@ -71,7 +71,7 @@
 	<div class="content">
 		
 		<div class="shs_title">
-			<a href="index.jsp">
+			<a href="index.shs">
 				JAVA기반 스마트 하이브리드<br>
 				개발자 과정 2기
 			</a>
@@ -80,10 +80,10 @@
 		<div class="shs_manager"> - 학사관리 - </div>
 		<div class="container">
 			<div class="div_index">
-				<a href="SHSInsert" class="btn_index btn1">학생등록</a>
+				<a href="insert.shs" class="btn_index btn1">학생등록</a>
 			</div>
 			<div class="div_index">
-				<a href="SHSSelect" class="btn_index btn2">출석부</a>
+				<a href="select.shs" class="btn_index btn2">출석부</a>
 			</div>
 			<div class="div_index">
 				<a href="#" class="btn_index btn3">만든이</a>

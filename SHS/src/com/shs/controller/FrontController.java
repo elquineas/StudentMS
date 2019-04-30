@@ -12,6 +12,10 @@ import javax.servlet.http.HttpServletResponse;
 import com.shs.action.Action;
 import com.shs.action.ActionForward;
 import com.shs.action.IndexAction;
+import com.shs.action.InsertAction;
+import com.shs.action.InsertPlayAction;
+import com.shs.action.SelectAction;
+import com.shs.action.WelcomeAction;
 
 /**
  * Servlet implementation class FrontController
@@ -48,14 +52,26 @@ public class FrontController extends HttpServlet {
 		String command = uri.substring(ctx.length());
 		//uri에서 ctx를 빼면 내가 원하는 소스만 뽑을 수 있다.
 		
-		System.out.println("uri>>>" + uri);
-		System.out.println("ctx>>>" + ctx);
+//		System.out.println("uri>>>" + uri);
+//		System.out.println("ctx>>>" + ctx);
 		System.out.println("페이지 이동 ===>" + command);
 		
 		if(command.equals("/index.shs")) {
-			action = new IndexAction();
+			action = new IndexAction(); // 객체생성
 			forward = action.execute(request, response);
-		}
+		} else if(command.equals("/insert.shs")) {
+			action = new InsertAction(); 
+			forward = action.execute(request, response);
+		} else if(command.equals("/insertPlay.shs")) {
+			action = new InsertPlayAction(); 
+			forward = action.execute(request, response);
+		} else if(command.equals("/welcome.shs")) {
+			action = new WelcomeAction(); 
+			forward = action.execute(request, response);
+		} else if(command.equals("/select.shs")) {
+			action = new SelectAction(); 
+			forward = action.execute(request, response);
+		} 
 		
 		//-------- 공통 분기 작업 ----------------
 		if(forward != null) {

@@ -109,7 +109,7 @@
 </head>
 <body>
 	<div class="content">
-		<a href="index.jsp">
+		<a href="index.shs">
 			<div class="shs_title">
 				JAVA기반 스마트 하이브리드<br>
 				개발자 과정 2기
@@ -117,7 +117,7 @@
 		</a>
 		<div class="shs_manager"> - 학사수정 - </div>
 		
-		<form action="SHSUpdate" id="frm_update" name="frm_update" method="POST">
+		<form action="insertPlay.shs" id="frm_update" name="frm_update" method="POST">
 			<div class="in_content">
 				<hr>
 					<div class="div_input">

@@ -153,12 +153,12 @@
 		</div>
 	</div>
 	<div class="content">
-		<a href="index.jsp">
-			<div class="shs_title">
+		<div class="shs_title">
+			<a href="index.shs">
 				JAVA기반 스마트 하이브리드<br>
 				개발자 과정 2기
-			</div>
-		</a>
+			</a>
+		</div>
 		<div class="shs_manager"> - 출석부 - </div>
 		<div class="in_content">
 			<table>
