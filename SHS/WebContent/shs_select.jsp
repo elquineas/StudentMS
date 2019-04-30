@@ -183,7 +183,7 @@
 						<td class="sid">${mDto.sid}</td>
 						<td class="sname">${mDto.sname}</td>
 						<td>${mDto.sphone}</td>
-						<td><a href="SHSUpdate?id=${mDto.sid}" class="uBtn">수정</a></td>
+						<td><a href="insertPlay?id=${mDto.sid}" class="uBtn">수정</a></td>
 						<td><a href="#" class="dBtn">삭제</a></td>
 					</tr>
 				</c:forEach>
