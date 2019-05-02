@@ -14,6 +14,8 @@ import com.shs.action.ActionForward;
 import com.shs.action.IndexAction;
 import com.shs.action.InsertAction;
 import com.shs.action.InsertPlayAction;
+import com.shs.action.SearchAction;
+import com.shs.action.SearchPlayAction;
 import com.shs.action.SelectAction;
 import com.shs.action.WelcomeAction;
 
@@ -71,7 +73,15 @@ public class FrontController extends HttpServlet {
 		} else if(command.equals("/select.shs")) {
 			action = new SelectAction(); 
 			forward = action.execute(request, response);
-		} 
+		} else if(command.equals("/search.shs")) {
+			action = new SearchAction(); 
+			forward = action.execute(request, response);
+		}else if(command.equals("/searchPlay.shs")) {
+			action = new SearchPlayAction(); 
+			forward = action.execute(request, response);
+		}
+		
+		
 		
 		//-------- 공통 분기 작업 ----------------
 		if(forward != null) {

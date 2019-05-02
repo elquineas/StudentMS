@@ -35,4 +35,11 @@
 		WHERE sid = #{id}
 	</delete>
 	<!-- id 하나만 낱개로 보내기 때문에 id라고 쓰고 DTO로 보내는 애들은 sid라고 씀 -->
+	
+	<select id="memSearch" parameterType="String" resultType="MemberDTO">
+		<![CDATA[
+			SELECT * FROM shsmember
+			WHERE sname LIKE '%'||#{name}||'%'
+		]]>
+	</select>
 </mapper>
