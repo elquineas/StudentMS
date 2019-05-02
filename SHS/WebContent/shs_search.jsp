@@ -211,7 +211,6 @@
 			</div>
 			<span class="err_msg">필수정보 입니다.</span>
 		</div>
-		
 		<div class="in_content">
 			<c:if test="${cnt > 0}">
 				<span class="search_result">
@@ -219,7 +218,6 @@
 				</span>
 			</c:if>
 		</div>
-		
 		<div class="in_content">
 			<table>
 				<tr class="table_title">
