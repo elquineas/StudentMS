@@ -9,12 +9,8 @@
 <head>
 <meta charset="UTF-8">
 <title>출석부</title>
+<link rel="stylesheet" href="css/common.css">
 <style type="text/css"> 
-	@import url('https://fonts.googleapis.com/css?family=Cute+Font');
-	*{font-family: 'Cute Font', cursive; box-sizing: border-box;}
-	body, ul{ margin: 0; padding: 0; }
-	a{ color: inherit; text-decoration: none; }
-	ul{ list-style: none; }
 
 	.content{
 		width: 390px;
@@ -153,12 +149,9 @@
 		</div>
 	</div>
 	<div class="content">
-		<div class="shs_title">
-			<a href="index.shs">
-				JAVA기반 스마트 하이브리드<br>
-				개발자 과정 2기
-			</a>
-		</div>
+		
+		<%@ include file="include/header.jsp" %>
+		
 		<div class="shs_manager"> - 출석부 - </div>
 		<div class="in_content">
 			<table>
@@ -192,7 +185,7 @@
 			</table>
 		</div>
 		<div class="div_index">
-			<a href="index" class="btn_index btn3">뒤로가기</a>
+			<a href="index.shs" class="btn_index btn3">뒤로가기</a>
 		</div>
 		
 	</div>

@@ -5,13 +5,9 @@
 <head>
 <meta charset="UTF-8">
 <title>학사관리</title>
+<link rel="stylesheet" href="css/common.css">
 <style type="text/css">
-	@import url('https://fonts.googleapis.com/css?family=Cute+Font');
-	*{font-family: 'Cute Font', cursive; box-sizing: border-box;}
-	body, ul{ margin: 0; padding: 0; }
-	a{ color: inherit; text-decoration: none; }
-	ul{ list-style: none; }
-
+	
 	.content{
 		width: 390px;
 		height: 600px;
@@ -21,12 +17,6 @@
 		border-radius:5px;
 		box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),
 					0 2px 10px 0 rgba(0,0,0,.12);
-	}
-	.shs_title{
-		padding-top: 50px;
-		text-align: center;
-		font-size: 30px;
-		color:#000;
 	}
 	.shs_manager{
 		padding-top: 20px;
@@ -70,13 +60,8 @@
 <body>
 	<div class="content">
 		
-		<div class="shs_title">
-			<a href="index.shs">
-				JAVA기반 스마트 하이브리드<br>
-				개발자 과정 2기
-			</a>
-		</div>
-		 
+		<%@ include file="include/header.jsp" %>
+		
 		<div class="shs_manager"> - 학사관리 - </div>
 		<div class="container">
 			<div class="div_index">

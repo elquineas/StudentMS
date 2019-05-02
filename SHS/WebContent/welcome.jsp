@@ -81,12 +81,8 @@
 </head>
 <body>
 	<div class="content">
-		<div class="shs_title">
-			<a href="index.shs">
-				JAVA기반 스마트 하이브리드<br>
-				개발자 과정 2기
-			</a> 
-		</div>
+		
+		<%@ include file="include/header.jsp" %>
 		
 		<div class="shs_manager"> - 환영합니다. - </div>
 		<div class="container">

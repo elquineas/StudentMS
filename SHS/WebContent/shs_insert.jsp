@@ -5,13 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>학생등록</title>
+<link rel="stylesheet" href="css/common.css">
 <style type="text/css">
-	@import url('https://fonts.googleapis.com/css?family=Cute+Font');
-	*{font-family: 'Cute Font', cursive; box-sizing: border-box;}
-	body, ul{ margin: 0; padding: 0; }
-	a{ color: inherit; text-decoration: none; }
-	ul{ list-style: none; }
-
 	.content{
 		width: 390px;
 		height: 600px;
@@ -64,6 +59,7 @@
 		text-align: right;
 	}
 	.div_input{
+		margin : 20px 0;
 		padding: 3px 20px;
 	}
 	.div_input > label{
@@ -97,12 +93,9 @@
 </head>
 <body>
 	<div class="content">
-		<div class="shs_title">
-			<a href="index.shs">
-				JAVA기반 스마트 하이브리드<br>
-				개발자 과정 2기
-			</a>
-		</div>
+		
+		<%@ include file="include/header.jsp" %>
+		
 		<div class="shs_manager"> - 학사등록 - </div>
 		
 		<form action="insertPlay.shs" id="frm_insert" name="frm_insert" method="POST">

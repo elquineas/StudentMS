@@ -11,7 +11,6 @@ public class IndexAction implements Action{
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		String url = "shs_index.jsp";
 		
 		ActionForward forward = new ActionForward();
