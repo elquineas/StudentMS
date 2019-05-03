@@ -39,6 +39,8 @@
 		display: inline-block;
 		border-radius: 10px;
 		font-size: 26px;
+		border:none;
+		cursor:pointer;
 	}
 	.btn_index:hover{
 		box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),
@@ -59,7 +61,6 @@
 		text-align: right;
 	}
 	.div_input{
-		margin : 20px 0;
 		padding: 3px 20px;
 	}
 	.div_input > label{
@@ -127,7 +128,8 @@
 			</div>
 			<div class="div_index btn_wrap">
 				<a href="index.shs" class="btn_index btn3">취소</a>
-				<a href="#" class="btn_index btn1 submitBtn">등록</a>
+				<!-- <a href="#" class="btn_index btn1 submitBtn">등록</a> -->
+				<button type="submit" class="btn_index btn1 submitBtn">등록</button>
 			</div>
 
 		</form>	
