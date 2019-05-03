@@ -112,6 +112,12 @@
 		letter-spacing: -1;
 
 	}
+/* 	.ft1{
+		width:100px;
+		height:100px;
+		border-radius:50%;
+		overflow:hidden;
+	} */
 	.ft1 > img{
 		width: 100px;
 		height: 100%;

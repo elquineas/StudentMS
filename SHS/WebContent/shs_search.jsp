@@ -203,14 +203,17 @@
 		<%@ include file="include/header.jsp" %>
 		
 		<div class="shs_manager"> - 학생검색 - </div>
-		
-		<div class="in_content">
-			<div class="search_wrap">
-				<input type="text" placeholder="검색할 이름을 입력해주세요." id="input_search" name="input_search" class="input_search" maxlength="4">
-				<a href="#" class="search_btn"><i class="fas fa-search"></i></a>
+		<form action="searchPlay.shs" method="get">
+			<div class="in_content">
+				<div class="search_wrap">
+					<input type="text" placeholder="검색할 이름을 입력해주세요." id="input_search" name="name" class="input_search" maxlength="4">
+				<!-- 	<a href="#" ></a> -->
+					<button type="submit" class="search_btn"><i class="fas fa-search"></i></button>
+				</div>
+				<span class="err_msg">필수정보 입니다.</span>
 			</div>
-			<span class="err_msg">필수정보 입니다.</span>
-		</div>
+		</form>
+		
 		<div class="in_content">
 			<c:if test="${cnt > 0}">
 				<span class="search_result">
