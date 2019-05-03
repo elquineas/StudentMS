@@ -11,13 +11,16 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.shs.action.Action;
 import com.shs.action.ActionForward;
+import com.shs.action.DeletePlayAction;
 import com.shs.action.IndexAction;
 import com.shs.action.InsertAction;
 import com.shs.action.InsertPlayAction;
 import com.shs.action.IntroduceAction;
 import com.shs.action.SearchAction;
 import com.shs.action.SearchPlayAction;
-import com.shs.action.SelectAction;
+import com.shs.action.SelectPlayAction;
+import com.shs.action.UpdateAction;
+import com.shs.action.UpdatePlayAction;
 import com.shs.action.WelcomeAction;
 
 /**
@@ -72,7 +75,7 @@ public class FrontController extends HttpServlet {
 			action = new WelcomeAction(); 
 			forward = action.execute(request, response);
 		} else if(command.equals("/select.shs")) {
-			action = new SelectAction(); 
+			action = new SelectPlayAction(); 
 			forward = action.execute(request, response);
 		} else if(command.equals("/search.shs")) {
 			action = new SearchAction(); 
@@ -83,7 +86,18 @@ public class FrontController extends HttpServlet {
 		} else if(command.equals("/introduce.shs")) {
 			action = new IntroduceAction(); 
 			forward = action.execute(request, response);
+		} else if(command.equals("/update.shs")) {
+			action = new UpdateAction(); 
+			forward = action.execute(request, response);
+		} else if(command.equals("/updatePlay.shs")) {
+			action = new UpdatePlayAction(); 
+			forward = action.execute(request, response);
+		} else if(command.equals("/delete.shs")) {
+			action = new DeletePlayAction(); 
+			forward = action.execute(request, response);
 		}
+		
+		
 		
 		
 		

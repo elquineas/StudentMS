@@ -1,9 +1,7 @@
 package com.shs.action;
 
 import java.io.IOException;
-import java.util.List;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -11,22 +9,21 @@ import javax.servlet.http.HttpServletResponse;
 import com.shs.dao.MemberDAO;
 import com.shs.dto.MemberDTO;
 
-public class SelectAction implements Action{
+public class UpdateAction implements Action{
 
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String url = "shs_select.jsp";
+		String url = "shs_update.jsp";
 		
+		int id = Integer.parseInt(request.getParameter("id"));
 		MemberDAO mDao = MemberDAO.getInstance();
-		List<MemberDTO> list = mDao.memSelect();
-		request.setAttribute("shslist", list);
-		RequestDispatcher dis = request.getRequestDispatcher("shs_select.jsp");
-		dis.forward(request, response);
+		MemberDTO mDto = mDao.memInfo(id);
+		request.setAttribute("memInfo", mDto);
 		
 		ActionForward forward = new ActionForward();
 		forward.setPath(url);
-		forward.setRedirect(false);
+		forward.setRedirect(false); //forward 방식으로 보냄
 		
 		return forward;
 	}

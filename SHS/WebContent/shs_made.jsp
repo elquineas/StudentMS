@@ -128,6 +128,12 @@
 	.ft_m1{
 		color: skyblue;
 	}
+	.close_btn{
+		display: inline-block;
+		width: 200px;
+		height: 50px; 
+		line-height: 50px;
+	}
 </style>
 </head>
 <body>
@@ -164,7 +170,7 @@
 		</div>
 
 		<div class="back_btn">
-			뒤로
+			<a href="index.shs" class="close_btn">뒤로</a>
 		</div>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
